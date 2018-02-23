@@ -1,4 +1,4 @@
-int LED =13; 
+int Led =13; 
 
 void setup ()
 {
@@ -6,9 +6,9 @@ void setup ()
 }
 void loop ()
 {
-  digitalWrite(LED, HIGH); //apply high voltage
+  digitalWrite(Led, HIGH); //apply high voltage
   delay(1000); //wait for a second
-  digitalWrite(LED, LOW); //apply low voltage
+  digitalWrite(Led, LOW); //apply low voltage
   delay(1000); //wait for a second 
 }
 
