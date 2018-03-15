@@ -7,14 +7,23 @@ This project is based on wireless controlling via microcontroller (Arduino), sen
 Our team members are:
 
 Amr Essam
+
 Hesham Samir
+
 Youssef Mahmoud Zaki
+
 Haithem Mustafa
+
 Mahmoud Magdy
+
 Moatassem Adel
+
 Youssef Galal
+
 Youssef Essam
+
 Hesham Hussien
+
 
 So, here are some notes about our project:
 
