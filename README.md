@@ -1,10 +1,10 @@
 Welcome to Group 08	
 
-We're working on smart toy project (RC Car)
+We're working on a smart toy project (RC Car)
 
-This project is based on electrical controlling via microcontroller (Arduino), sensors and ICs.
+This project is based on wireless controlling via microcontroller (Arduino), sensors and ICs.
 
-So, here are some note about our project:
+So, here are some notes about our project:
 
 1-	I] The Main Components we bought:
 
