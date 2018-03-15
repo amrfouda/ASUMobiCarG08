@@ -31,7 +31,7 @@ So, here are some notes about our project:
 
 		a) Arduino Mega (250 LE)
 		b) Four motors for each wheel (220 LE for each wheel = 880 LE)
-		c) Car body which an aclerec kit designed by us, and we used laser cuttiing to fabricate it (100 LE)
+		c) Car body which an acrylic kit designed by us, and we used laser cuttiing to fabricate it (100 LE)
 		
 	II] Other Components:
 	
