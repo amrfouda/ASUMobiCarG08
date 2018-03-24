@@ -1,0 +1,22 @@
+int i = 0, j = 0, k = 0;
+int circle = A0;
+int Leds[] = {13,12,11,10,9,8,7,6,5,4};
+int count = 10;
+
+void setup(){
+for (j =0; j < count; j = j + 1){
+  
+  pinMode(Leds[j],OUTPUT);} 
+}
+
+void loop(){
+
+  i = analogRead(circle);
+  
+for (j = 0; j < count; j = j + 1) {
+
+  digitalWrite(Leds[j],HIGH);
+  delay(i);
+  digitalWrite(Leds[j],LOW);
+}
+}
