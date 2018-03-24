@@ -1,0 +1,35 @@
+int led = 13, state = 0;
+int button = 7, button1 = 3;
+
+void setup(){
+
+  pinMode(led,OUTPUT);
+  pinMode(button,INPUT);
+  pinMode(button1,INPUT);
+  
+  }
+
+void loop(){
+
+if(digitalRead(button) == HIGH) {state =1;}
+if(digitalRead(button1) == HIGH) {state =2;}
+
+  state1:
+    if(state ==1){
+        digitalWrite(led,HIGH);
+        if(digitalRead(button1) == HIGH) {state =2;goto state2;}
+        delay(500);
+        digitalWrite(led,LOW);
+        if(digitalRead(button1) == HIGH) {state =2;goto state2;}
+        delay(500);
+    }
+  state2:
+    if(state ==2){
+        digitalWrite(led,HIGH);
+        if(digitalRead(button) == HIGH) {state =1;goto state1;}
+        delay(100);
+        digitalWrite(led,LOW);
+        if(digitalRead(button) == HIGH) {state =1;goto state1;}
+        delay(100);
+    }
+}
