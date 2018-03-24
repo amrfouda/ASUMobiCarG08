@@ -1,0 +1,77 @@
+int led = 13, led1 = 12, led2 = 11, led3 = 10, state = 0;
+int button = 7, button1 = 3;
+
+void setup(){
+
+  pinMode(led,OUTPUT);
+  pinMode(led1,OUTPUT);
+  pinMode(led2,OUTPUT);
+  pinMode(led3,OUTPUT);
+  pinMode(button,INPUT);
+  pinMode(button1,INPUT);
+  
+  }
+
+void loop(){
+
+if(digitalRead(button) == HIGH) {state =1;}
+if(digitalRead(button1) == HIGH) {state =2;}
+
+
+  state1:
+    if(state ==1){
+        digitalWrite(led,HIGH);
+        if(digitalRead(button1) == HIGH) {state =2;goto state2;}
+        delay(500);
+        digitalWrite(led1,HIGH);
+        if(digitalRead(button1) == HIGH) {state =2;goto state2;}
+        delay(500);
+        digitalWrite(led2,HIGH);
+        if(digitalRead(button1) == HIGH) {state =2;goto state2;}
+        delay(500);
+        digitalWrite(led3,HIGH);
+        if(digitalRead(button1) == HIGH) {state =2;goto state2;}
+        delay(500);
+        digitalWrite(led3,LOW);
+        if(digitalRead(button1) == HIGH) {state =2;goto state2;}
+        delay(500);
+        digitalWrite(led2,LOW);
+        if(digitalRead(button1) == HIGH) {state =2;goto state2;}
+        delay(500);
+        digitalWrite(led1,LOW);
+        if(digitalRead(button1) == HIGH) {state =2;goto state2;}
+        delay(500);
+        digitalWrite(led,LOW);
+        if(digitalRead(button1) == HIGH) {state =2;goto state2;}
+        delay(500);
+    }
+  state2:
+    if(state ==2){
+        digitalWrite(led,HIGH);
+        if(digitalRead(button) == HIGH) {state =1;goto state1;}
+        delay(100);
+        digitalWrite(led1,HIGH);
+        if(digitalRead(button) == HIGH) {state =1;goto state1;}
+        delay(100);
+        digitalWrite(led2,HIGH);
+        if(digitalRead(button) == HIGH) {state =1;goto state1;}
+        delay(100);
+        digitalWrite(led3,HIGH);
+        if(digitalRead(button) == HIGH) {state =1;goto state1;}
+        delay(100);
+        digitalWrite(led3,LOW);
+        if(digitalRead(button) == HIGH) {state =1;goto state1;}
+        delay(100);
+        digitalWrite(led2,LOW);
+        if(digitalRead(button) == HIGH) {state =1;goto state1;}
+        delay(100);
+        digitalWrite(led1,LOW);
+        if(digitalRead(button) == HIGH) {state =1;goto state1;}
+        delay(100);
+        digitalWrite(led,LOW);
+        if(digitalRead(button) == HIGH) {state =1;goto state1;}
+        delay(100);
+
+    }
+
+}
