@@ -29,16 +29,16 @@ So, here are some notes about our project:
 
 1-  I] The Main Components we bought:
 
-		a) Arduino Mega (250 LE)
-		b) Four motors for each wheel (220 LE for each wheel = 880 LE)
-		c) Car body which an acrylic kit designed by us, and we used laser cuttiing to fabricate it (100 LE)
+		a) Arduino Mega
+		b) Four motors for each wheel
+		c) Car body which an acrylic kit designed by us, and we used laser cuttiing to fabricate it
 		
    II] Other Components:
 	
-		a) Ultrasonic Sensor (40 LE)
-		b) A driver (H-bridge driver for controlling the motors) (65 LE)
-		c) Lithium battery with a charger (450 LE)
-		d) Bluetooth module (100 LE)
+		a) Ultrasonic Sensor
+		b) A driver (H-bridge driver for controlling the motors)
+		c) Lithium battery with a charger
+		d) Bluetooth module
 		
 	** We're planning to add other components for the next stages.
 	
