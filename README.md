@@ -31,7 +31,7 @@ So, here are some notes about our project:
 
 		a) Arduino Mega
 		b) Four motors for each wheel
-		c) Car body which an acrylic kit designed by us, and we used laser cuttiing to fabricate it
+		c) Car body which is an acrylic kit designed by us, and we used laser cuttiing to fabricate it
 		
    II] Other Components:
 	
