@@ -39,6 +39,7 @@ So, here are some notes about our project:
 		b) A driver (H-bridge driver for controlling the motors)
 		c) Lithium battery with a charger
 		d) Bluetooth module
+		e) 3-channel line follower
 		
 	** We're planning to add other components for the next stages.
 	
