@@ -37,9 +37,10 @@ So, here are some notes about our project:
 	
 		a) Ultrasonic Sensor
 		b) A driver (H-bridge driver for controlling the motors)
-		c) Lithium battery with a charger
+		c) Lithium battery with a charger (12 volt)
 		d) Bluetooth module
 		e) 3-channel line follower
+		f) 9 volt battery
 		
 	** We're planning to add other components for the next stages.
 	
