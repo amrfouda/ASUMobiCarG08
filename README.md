@@ -44,7 +44,7 @@ So, here are some notes about our project:
 		
 	** We're planning to add other components for the next stages.
 	
-2-	We were divided into 3 teams:
+2-	We were divided into 3 teams to accomplish stage 1:
 
 	First team members were: Hesham Hussein, Moatassem Adel, Youssef Essam and Youssef Galal.
 	This team was responsible to search for the optimum components and buying it, while cooperating with the other teams.
@@ -54,6 +54,13 @@ So, here are some notes about our project:
 	
 	Third team members were: Haitham Mustafa and Youssef Mahmoud Zaki.
 	This team was responsible for the coding and the simulation.
+	
+3-      To accomplish stage 2:
+        
+	- Youssef Zaki and Hesham Hussien are responsible for the code.
+	- Amr Essam, Mahmoud Magdy, Moatassem Adel and Hesham Samir are responsible for the implementation of the sensor.
+	
+
 	
 	
 
