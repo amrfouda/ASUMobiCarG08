@@ -59,6 +59,7 @@ So, here are some notes about our project:
         
 	- Youssef Zaki and Hesham Hussien are responsible for the code.
 	- Amr Essam, Mahmoud Magdy, Moatassem Adel and Hesham Samir are responsible for the implementation of the sensor.
+	-Haithem mostafa ,youssef essam,youssef galal are responsible for final testing of line tracking.
 	
 
 	
