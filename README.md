@@ -31,18 +31,20 @@ So, here are some notes about our project:
 
 		a) Arduino Mega
 		b) Four motors for each wheel
-		c) Car body which is an acrylic kit designed by us, and we used laser cuttiing to fabricate it
+		c) Car body which is an acrylic kit designed by us, and we used laser cutting to fabricate it
 		
    II] Other Components:
 	
 		a) Ultrasonic Sensor
 		b) A driver (H-bridge driver for controlling the motors)
-		c) Lithium battery with a charger
+		c) Lithium battery with a charger (12 volt)
 		d) Bluetooth module
+		e) 5-channel line follower
+		f) 9 volt battery
 		
 	** We're planning to add other components for the next stages.
 	
-2-	We were divided into 3 teams:
+2-	We were divided into 3 teams to accomplish stage 1:
 
 	First team members were: Hesham Hussein, Moatassem Adel, Youssef Essam and Youssef Galal.
 	This team was responsible to search for the optimum components and buying it, while cooperating with the other teams.
@@ -52,6 +54,14 @@ So, here are some notes about our project:
 	
 	Third team members were: Haitham Mustafa and Youssef Mahmoud Zaki.
 	This team was responsible for the coding and the simulation.
+	
+3-      To accomplish stage 2:
+        
+	- Youssef Zaki and Hesham Hussien are responsible for the code.
+	- Amr Essam, Mahmoud Magdy, Moatassem Adel and Hesham Samir are responsible for the implementation of the sensor.
+	-Haithem mostafa ,youssef essam,youssef galal are responsible for final testing of line tracking.
+	
+
 	
 	
 
