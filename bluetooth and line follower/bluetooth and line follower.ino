@@ -6,8 +6,8 @@ const byte mlb = 51 ;
 const byte mrs = 2 ;
 const byte mls = 3 ;
 //declare ultrasonic pins
-const byte trig = 9 ;
-const byte echo = 8 ;
+const byte trig = 11 ;
+const byte echo = 9 ;
 int action = 0 ;
 int action1 = 0 ;
 
@@ -136,9 +136,40 @@ void stopp()
   analogWrite(mls, 0);
 }
 
-void lineFollower()
+
+
+
+
+void setup() 
 {
-  l2state = digitalRead(l2);
+  pinMode(mrf , OUTPUT);
+  pinMode(mrb , OUTPUT);
+  pinMode(mrs , OUTPUT);
+  pinMode(mlf , OUTPUT);
+  pinMode(mlb , OUTPUT);
+  pinMode(mls , OUTPUT);
+
+  pinMode(l1,INPUT);
+  pinMode(l2,INPUT);
+  pinMode(c,INPUT);
+  pinMode(r1,INPUT);
+  pinMode(r2,INPUT);
+
+  
+  Serial.begin(9600);
+  
+}
+
+
+
+
+void loop() 
+{ if(Serial.available() > 0)
+  {
+    action1 = Serial.read();
+    if(action1=='X')
+    {
+      l2state = digitalRead(l2);
   l1state = digitalRead(l1);
   cstate = digitalRead(c);
   r1state = digitalRead(r1);
@@ -184,10 +215,10 @@ void lineFollower()
   {
     right();
   }
-}
-void bluetooth()
-{
-  digitalWrite(trig , LOW);
+    }
+    else if (action1=='x')
+    {
+     digitalWrite(trig , LOW);
   delayMicroseconds(2);
   digitalWrite(trig , HIGH);
   delayMicroseconds(10);
@@ -200,29 +231,12 @@ void bluetooth()
   {
     action = Serial.read();
 
-    if(action == 'F' && distance > 40)
+    if(action == 'F')
     {
       forward();
     }
-    else if(action == 'F' )
-    {
-      while(distance <= 40)
-      {
-        left();
-        
-        delay(500);
-        digitalWrite(trig , LOW);
-        delayMicroseconds(2);
-        digitalWrite(trig , HIGH);
-        delayMicroseconds(10);
-        digitalWrite(trig , LOW);
-
-        duration = pulseIn(echo , HIGH) ;
-        distance = duration * (0.034/2) ;
-        
-      }
-      
-    }
+   
+    
     else if(action == 'B')
     {
       backward();
@@ -241,44 +255,6 @@ void bluetooth()
     }
   }
   
-}
-
-
-
-void setup() 
-{
-  pinMode(mrf , OUTPUT);
-  pinMode(mrb , OUTPUT);
-  pinMode(mrs , OUTPUT);
-  pinMode(mlf , OUTPUT);
-  pinMode(mlb , OUTPUT);
-  pinMode(mls , OUTPUT);
-
-  pinMode(l1,INPUT);
-  pinMode(l2,INPUT);
-  pinMode(c,INPUT);
-  pinMode(r1,INPUT);
-  pinMode(r2,INPUT);
-
-  
-  Serial.begin(9600);
-  
-}
-
-
-
-
-void loop() 
-{ if(Serial.available() > 0)
-  {
-    action1 = Serial.read();
-    if(action1=='X')
-    {
-      lineFollower();
-    }
-    else if (action1=='x')
-    {
-      bluetooth();
     }
     
     
