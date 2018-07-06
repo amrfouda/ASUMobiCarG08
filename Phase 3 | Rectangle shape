@@ -1,0 +1,53 @@
+      int noOfQuarterCyclesRead ;
+            int noOfQuarterCycles ;
+  
+            for(int i = 0 ; i < 4 ; i++)
+            {
+              noOfQuarterCyclesRead = 0;
+              noOfQuarterCycles = 100 / 5.5 ;
+              while(noOfQuarterCyclesRead < noOfQuarterCycles)
+              {
+                forward();
+                if(digitalRead(lineFollower) == HIGH)
+                {
+                  noOfQuarterCyclesRead++ ;
+                  delay(60);
+                }
+              }
+              stopp();
+              delay(50);
+    
+              actualAngle1 = 0;
+              for(int i = 0 ; i <= 7 ; i++ )
+              {
+                y[i] = digitalRead(i+30);
+                actualAngle1 += (y[i]*pow(2,i));      
+              }
+              if(digitalRead(38) == 1)
+              {
+                actualAngle1 = actualAngle1 * -1;
+              }
+              
+              while( ((actualAngle2 - actualAngle1) < 92.0) || ((actualAngle2 - actualAngle1) > 100.0) )
+              {
+                right();
+                actualAngle2 = 0;
+                for(int i = 0 ; i <= 7 ; i++ )
+                {
+                  y[i] = digitalRead(i+30);
+                  actualAngle2 += (y[i]*pow(2,i));      
+                }
+                if(digitalRead(38) == 1)
+                {
+                  actualAngle2 = actualAngle2 * -1;
+                }
+                Serial.println(actualAngle2);
+                if((actualAngle2 - actualAngle1) < 0)
+                {
+                  actualAngle2 = actualAngle2 + 360 ;
+                }
+              }
+              stopp();
+              delay(50);
+            }
+            delay(1000);
