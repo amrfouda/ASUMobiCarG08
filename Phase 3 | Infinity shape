@@ -81,6 +81,6 @@ actualAngle1 = 0;
               }
 
               z++;
-           }while( (((actualAngle2 - actualAngle1) < (-5.0)) || ((actualAngle2 - actualAngle1) > (5.0))) || (z < B)  );
+           }while( (((actualAngle2 - actualAngle1) < (-5.0)) || ((actualAngle2 - actualAngle1) > (5.0))) || (z < 8)  );
             stopp();
             delay(1000);
