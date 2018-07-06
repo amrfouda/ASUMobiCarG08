@@ -1,0 +1,55 @@
+    else if(mode == '3')
+    {
+      while(1)
+      {
+        actualAngle1 = 0;
+        for(int i = 0 ; i <= 7 ; i++ )
+        {
+          y[i] = digitalRead(i+30);
+          actualAngle1 += (y[i]*pow(2,i));      
+        }
+        if(digitalRead(38) == 1)
+        {
+          actualAngle1 = actualAngle1 * -1;
+        }
+        if(Serial.available() > 0)
+        {
+          actionPh3 = Serial.read();
+          if(actionPh3 == 'm')
+          {
+            int noOfQuarterCyclesRead = 0 ;
+            int noOfQuarterCycles ;
+            
+            noOfNumbers = 0 ;
+            do
+            {
+              x = Serial.read();
+              if((x >= 48) && (x <= 57))
+              {
+               number[noOfNumbers] = x - 48 ;
+               noOfNumbers ++;
+              }
+              if(noOfNumbers >= 9)
+              {
+                break;
+              }
+            }while(x != '.');
+          
+            motionValue = 0 ;
+            for(int i = 0 ; i < noOfNumbers ; i++)
+            {
+              motionValue += number[i] * pow(10 , noOfNumbers - 1 - i);
+            }
+            
+            noOfQuarterCycles = motionValue / 5.5 ;
+            while(noOfQuarterCyclesRead < noOfQuarterCycles)
+            {
+              forward();
+              if(digitalRead(lineFollower) == HIGH)
+              {
+                noOfQuarterCyclesRead++ ;
+                delay(60);
+              }
+            }
+            stopp();
+          }
