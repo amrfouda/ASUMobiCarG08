@@ -61,6 +61,13 @@ So, here are some notes about our project:
 	- Amr Essam, Mahmoud Magdy, Moatassem Adel and Hesham Samir are responsible for the implementation of the sensor.
 	-Haithem mostafa ,youssef essam,youssef galal are responsible for final testing of line tracking.
 	
+4-	To accomplish stage 3:
+
+	- The components we used are Gyroscope & line follower.
+	- Gyroscope is a sensor to measure the Angle.
+	- Line follower is to count the number of cycles of a wheel.
+	- We attached 4 marks at North, south, east and west of the wheel, its divided into 4 quarters tho.
+	
 
 	
 	
