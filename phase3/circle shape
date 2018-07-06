@@ -1,0 +1,44 @@
+actualAngle1 = 0;
+            for(int i = 0 ; i <= 7 ; i++ )
+            {
+              y[i] = digitalRead(i+30);
+              actualAngle1 += (y[i]*pow(2,i));      
+            }
+            if(digitalRead(38) == 1)
+            {
+              actualAngle1 = actualAngle1 * -1;
+            }
+
+            forwardRight1();
+            delay(100);
+             z = 0 ;
+            do
+            {
+              forward();
+              delay(50);
+              forwardRight1();
+              delay(700);
+              actualAngle2 = 0;
+              for(int i = 0 ; i <= 7 ; i++ )
+              {
+                y[i] = digitalRead(i+30);
+                actualAngle2 += (y[i]*pow(2,i));      
+              }
+              if(digitalRead(38) == 1)
+              {
+                actualAngle2 = actualAngle2 * -1;
+              }
+              Serial.println(actualAngle2);
+              if( actualAngle2 < -180 )
+              {
+                actualAngle2 = actualAngle2 + 360 ;
+              }
+  
+              if( actualAngle2 > 180 )
+              {
+                actualAngle2 = actualAngle2 - 360 ;
+              }
+              z++;
+            }while( (((actualAngle2 - actualAngle1) < (-7.0)) || ((actualAngle2 - actualAngle1) > (7.0))) || (z < 😎 );
+            stopp();
+          }
